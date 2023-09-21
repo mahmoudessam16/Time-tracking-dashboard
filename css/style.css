@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 25px;
+}
+body .container .jeremy {
+  grid-area: 1/1/span 4/span 3;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(235, 46%, 20%);
+  color: white;
+  border-radius: 10px;
+}
+body .container .jeremy .personal {
+  background-color: hsl(246, 80%, 60%);
+  padding: 25px;
+  border-radius: 10px;
+}
+body .container .jeremy .personal img {
+  width: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+body .container .jeremy .personal p {
+  margin: 20px 0 40px 0;
+  font-size: 14px;
+  color: hsl(236, 100%, 87%);
+}
+body .container .jeremy .personal p .name {
+  display: block;
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+}
+body .container .jeremy .btns {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 25px;
+}
+body .container .jeremy .btns button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 15px;
+  color: hsl(235, 45%, 61%);
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .container .jeremy .btns button:hover {
+  color: white;
+}
+body .container .item-2, body .container .item-3, body .container .item-4 {
+  grid-area: 1/4/span 4/span 3;
+  display: flex;
+  flex-direction: column;
+}
+body .container .item-2 .work, body .container .item-2 .exercise, body .container .item-2 .play, body .container .item-2 .social, body .container .item-2 .study, body .container .item-2 .self-care, body .container .item-3 .work, body .container .item-3 .exercise, body .container .item-3 .play, body .container .item-3 .social, body .container .item-3 .study, body .container .item-3 .self-care, body .container .item-4 .work, body .container .item-4 .exercise, body .container .item-4 .play, body .container .item-4 .social, body .container .item-4 .study, body .container .item-4 .self-care {
+  height: calc(50% - 12.5px);
+  background-repeat: no-repeat;
+  background-size: 55px 55px;
+  background-position: 95% -5px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+body .container .item-2 .work .info, body .container .item-2 .exercise .info, body .container .item-2 .play .info, body .container .item-2 .social .info, body .container .item-2 .study .info, body .container .item-2 .self-care .info, body .container .item-3 .work .info, body .container .item-3 .exercise .info, body .container .item-3 .play .info, body .container .item-3 .social .info, body .container .item-3 .study .info, body .container .item-3 .self-care .info, body .container .item-4 .work .info, body .container .item-4 .exercise .info, body .container .item-4 .play .info, body .container .item-4 .social .info, body .container .item-4 .study .info, body .container .item-4 .self-care .info {
+  background-color: hsl(235, 46%, 20%);
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  padding: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body .container .item-2 .work .info:hover, body .container .item-2 .exercise .info:hover, body .container .item-2 .play .info:hover, body .container .item-2 .social .info:hover, body .container .item-2 .study .info:hover, body .container .item-2 .self-care .info:hover, body .container .item-3 .work .info:hover, body .container .item-3 .exercise .info:hover, body .container .item-3 .play .info:hover, body .container .item-3 .social .info:hover, body .container .item-3 .study .info:hover, body .container .item-3 .self-care .info:hover, body .container .item-4 .work .info:hover, body .container .item-4 .exercise .info:hover, body .container .item-4 .play .info:hover, body .container .item-4 .social .info:hover, body .container .item-4 .study .info:hover, body .container .item-4 .self-care .info:hover {
+  background-color: hsl(235, 45%, 61%);
+}
+body .container .item-2 .work .info .start, body .container .item-2 .exercise .info .start, body .container .item-2 .play .info .start, body .container .item-2 .social .info .start, body .container .item-2 .study .info .start, body .container .item-2 .self-care .info .start, body .container .item-3 .work .info .start, body .container .item-3 .exercise .info .start, body .container .item-3 .play .info .start, body .container .item-3 .social .info .start, body .container .item-3 .study .info .start, body .container .item-3 .self-care .info .start, body .container .item-4 .work .info .start, body .container .item-4 .exercise .info .start, body .container .item-4 .play .info .start, body .container .item-4 .social .info .start, body .container .item-4 .study .info .start, body .container .item-4 .self-care .info .start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container .item-2 .work .info .start h3, body .container .item-2 .exercise .info .start h3, body .container .item-2 .play .info .start h3, body .container .item-2 .social .info .start h3, body .container .item-2 .study .info .start h3, body .container .item-2 .self-care .info .start h3, body .container .item-3 .work .info .start h3, body .container .item-3 .exercise .info .start h3, body .container .item-3 .play .info .start h3, body .container .item-3 .social .info .start h3, body .container .item-3 .study .info .start h3, body .container .item-3 .self-care .info .start h3, body .container .item-4 .work .info .start h3, body .container .item-4 .exercise .info .start h3, body .container .item-4 .play .info .start h3, body .container .item-4 .social .info .start h3, body .container .item-4 .study .info .start h3, body .container .item-4 .self-care .info .start h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+body .container .item-2 .work .info .hours, body .container .item-2 .exercise .info .hours, body .container .item-2 .play .info .hours, body .container .item-2 .social .info .hours, body .container .item-2 .study .info .hours, body .container .item-2 .self-care .info .hours, body .container .item-3 .work .info .hours, body .container .item-3 .exercise .info .hours, body .container .item-3 .play .info .hours, body .container .item-3 .social .info .hours, body .container .item-3 .study .info .hours, body .container .item-3 .self-care .info .hours, body .container .item-4 .work .info .hours, body .container .item-4 .exercise .info .hours, body .container .item-4 .play .info .hours, body .container .item-4 .social .info .hours, body .container .item-4 .study .info .hours, body .container .item-4 .self-care .info .hours {
+  display: block;
+  font-size: 35px;
+  margin: 20px 0;
+  color: white;
+  font-weight: 300;
+}
+body .container .item-2 .work .info p, body .container .item-2 .exercise .info p, body .container .item-2 .play .info p, body .container .item-2 .social .info p, body .container .item-2 .study .info p, body .container .item-2 .self-care .info p, body .container .item-3 .work .info p, body .container .item-3 .exercise .info p, body .container .item-3 .play .info p, body .container .item-3 .social .info p, body .container .item-3 .study .info p, body .container .item-3 .self-care .info p, body .container .item-4 .work .info p, body .container .item-4 .exercise .info p, body .container .item-4 .play .info p, body .container .item-4 .social .info p, body .container .item-4 .study .info p, body .container .item-4 .self-care .info p {
+  color: hsl(236, 100%, 87%);
+  font-size: 13px;
+}
+body .container .item-2 .work, body .container .item-3 .work, body .container .item-4 .work {
+  background-color: hsl(15, 100%, 70%);
+  background-image: url(../images/icon-work.svg);
+  margin-bottom: 12.5px;
+}
+body .container .item-2 .exercise, body .container .item-3 .exercise, body .container .item-4 .exercise {
+  background-color: hsl(145, 58%, 55%);
+  background-image: url(../images/icon-exercise.svg);
+  margin-top: 12.5px;
+}
+body .container .item-2 .play, body .container .item-3 .play, body .container .item-4 .play {
+  background-color: hsl(195, 74%, 62%);
+  background-image: url(../images/icon-play.svg);
+  margin-top: 12.5px;
+}
+body .container .item-2 .social, body .container .item-3 .social, body .container .item-4 .social {
+  background-color: hsl(264, 64%, 52%);
+  background-image: url(../images/icon-social.svg);
+  margin-bottom: 12.5px;
+}
+body .container .item-2 .study, body .container .item-3 .study, body .container .item-4 .study {
+  background-color: hsl(348, 100%, 68%);
+  background-image: url(../images/icon-study.svg);
+  margin-bottom: 12.5px;
+}
+body .container .item-2 .self-care, body .container .item-3 .self-care, body .container .item-4 .self-care {
+  background-color: hsl(43, 84%, 65%);
+  background-image: url(../images/icon-self-care.svg);
+  margin-top: 12.5px;
+}
+body .container .item-3 {
+  grid-area: 1/7/span 4/span 3;
+  display: flex;
+  flex-direction: column;
+}
+body .container .item-4 {
+  grid-area: 1/10/span 4/span 3;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 98% !important;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    width: 90% !important;
+    margin-top: 30px !important;
+  }
+  .container .jeremy, .container .item-2, .container .item-3, .container .item-4 {
+    height: 310px !important;
+  }
+  .container .jeremy .work .info .hours, .container .jeremy .exercise .info .hours, .container .jeremy .play .info .hours, .container .jeremy .social .info .hours, .container .jeremy .self-care .info .hours, .container .jeremy .study .info .hours, .container .item-2 .work .info .hours, .container .item-2 .exercise .info .hours, .container .item-2 .play .info .hours, .container .item-2 .social .info .hours, .container .item-2 .self-care .info .hours, .container .item-2 .study .info .hours, .container .item-3 .work .info .hours, .container .item-3 .exercise .info .hours, .container .item-3 .play .info .hours, .container .item-3 .social .info .hours, .container .item-3 .self-care .info .hours, .container .item-3 .study .info .hours, .container .item-4 .work .info .hours, .container .item-4 .exercise .info .hours, .container .item-4 .play .info .hours, .container .item-4 .social .info .hours, .container .item-4 .self-care .info .hours, .container .item-4 .study .info .hours {
+    margin: 20px 0 0 0 !important;
+  }
+  .container .jeremy .work .info p, .container .jeremy .exercise .info p, .container .jeremy .play .info p, .container .jeremy .social .info p, .container .jeremy .self-care .info p, .container .jeremy .study .info p, .container .item-2 .work .info p, .container .item-2 .exercise .info p, .container .item-2 .play .info p, .container .item-2 .social .info p, .container .item-2 .self-care .info p, .container .item-2 .study .info p, .container .item-3 .work .info p, .container .item-3 .exercise .info p, .container .item-3 .play .info p, .container .item-3 .social .info p, .container .item-3 .self-care .info p, .container .item-3 .study .info p, .container .item-4 .work .info p, .container .item-4 .exercise .info p, .container .item-4 .play .info p, .container .item-4 .social .info p, .container .item-4 .self-care .info p, .container .item-4 .study .info p {
+    float: right !important;
+    margin-top: -24px;
+  }
+  .container .jeremy {
+    grid-area: 1/1/span 4/span 12 !important;
+    height: auto !important;
+  }
+  .container .jeremy .personal {
+    display: flex;
+    align-items: center;
+    padding: 20px !important;
+  }
+  .container .jeremy .personal img {
+    margin-right: 20px;
+  }
+  .container .jeremy .personal p {
+    margin: 0 !important;
+  }
+  .container .jeremy .personal p .name {
+    font-size: 21px !important;
+  }
+  .container .jeremy .btns {
+    flex-direction: row !important;
+    justify-content: space-between;
+    margin: 16px 20px !important;
+  }
+  .container .item-2 {
+    grid-area: 5/1/span 4/span 12 !important;
+  }
+  .container .item-3 {
+    grid-area: 9/1/span 4/span 12 !important;
+  }
+  .container .item-4 {
+    grid-area: 13/1/span 4/span 12 !important;
+  }
+}/*# sourceMappingURL=style.css.map */

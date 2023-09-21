@@ -1,0 +1,232 @@
+$Blue: hsl(246, 80%, 60%);
+$Lightredwork: hsl(15, 100%, 70%);
+$Softblueplay: hsl(195, 74%, 62%);
+$Lightredstudy: hsl(348, 100%, 68%);
+$Limegreenexercise: hsl(145, 58%, 55%);
+$Violetsocial: hsl(264, 64%, 52%);
+$Softorangeselfcare: hsl(43, 84%, 65%);
+$Verydarkblue: hsl(226, 43%, 10%);
+$Darkblue: hsl(235, 46%, 20%);
+$Desaturatedblue: hsl(235, 45%, 61%);
+$PaleBlue: hsl(236, 100%, 87%);
+$size: 18px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $Verydarkblue;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 25px;
+        .jeremy {
+            grid-area: 1 / 1 / span 4 / span 3;
+            display: flex;
+            flex-direction: column;
+            background-color: $Darkblue;
+            color: white;
+            border-radius: 10px;
+            .personal {
+                background-color: $Blue;
+                padding: 25px;
+                border-radius: 10px;
+                img {
+                    width: 60px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                }
+                p {
+                    margin: 20px 0 40px 0;
+                    font-size: 14px;
+                    color: $PaleBlue;
+                    .name {
+                        display: block;
+                        font-size: 32px;
+                        font-weight: 300;
+                        color: white;
+                    }
+                }
+            }
+            .btns {
+                display: flex;
+                flex-direction: column;
+                margin: 16px 25px;
+                button {
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    text-align: left;
+                    font-size: 15px;
+                    color: $Desaturatedblue;
+                    padding: 10px 0;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .item-2, .item-3, .item-4 {
+            grid-area: 1 / 4 / span 4 / span 3;
+            display: flex;
+            flex-direction: column;
+            .work, .exercise, .play, .social, .study, .self-care {
+                height: calc(50% - 12.5px);
+                background-repeat: no-repeat;
+                background-size: 55px 55px;
+                background-position: 95% -5px;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                .info {
+                    background-color: $Darkblue;
+                    position: absolute;
+                    width: 100%;
+                    height: 80%;
+                    bottom: 0;
+                    left: 0;
+                    border-radius: inherit;
+                    padding: 20px;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $Desaturatedblue;
+                    }
+                    .start {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        h3 {
+                            color: white;
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+                    }
+                    .hours {
+                        display: block;
+                        font-size: 35px;
+                        margin: 20px 0;
+                        color: white;
+                        font-weight: 300;
+                    }
+                    p {
+                        color: $PaleBlue;
+                        font-size: 13px;
+                    }
+                }
+            }
+            .work {
+                background-color: $Lightredwork;
+                background-image: url(../images/icon-work.svg);
+                margin-bottom: 12.5px;
+            }
+            .exercise {
+                background-color: $Limegreenexercise;
+                background-image: url(../images/icon-exercise.svg);
+                margin-top: 12.5px;
+            }
+            .play {
+                background-color: $Softblueplay;
+                background-image: url(../images/icon-play.svg);
+                margin-top: 12.5px;
+            }
+            .social {
+                background-color: $Violetsocial;
+                background-image: url(../images/icon-social.svg);
+                margin-bottom: 12.5px;
+            }
+            .study {
+                background-color: $Lightredstudy;
+                background-image: url(../images/icon-study.svg);
+                margin-bottom: 12.5px;
+            }
+            .self-care {
+                background-color: $Softorangeselfcare;
+                background-image: url(../images/icon-self-care.svg);
+                margin-top: 12.5px;
+            }
+        }
+        .item-3 {
+            grid-area: 1 / 7 / span 4 / span 3;
+            display: flex;
+            flex-direction: column;
+        }
+        .item-4 {
+            grid-area: 1 / 10 / span 4 / span 3;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 98% !important;
+    }
+}
+@media (max-width: 650px) {
+    .container {
+        width: 90% !important;
+        margin-top: 30px !important;
+        .jeremy, .item-2, .item-3, .item-4 {
+            height: 310px !important;
+            .work, .exercise, .play, .social, .self-care, .study {
+                .info {
+                    .hours {
+                        margin: 20px 0 0 0 !important;
+                    }
+                    p {
+                        float: right !important;
+                        margin-top: -24px;
+                    }
+                }
+            }
+        }
+        .jeremy {
+            grid-area: 1 / 1 / span 4 / span 12 !important;
+            height: auto !important;
+            .personal {
+                display: flex;
+                align-items: center;
+                padding: 20px !important;
+                img {
+                    margin-right: 20px;
+                }
+                p {
+                    margin: 0 !important;
+                    .name {
+                        font-size: 21px !important;
+                    }
+                }
+            }
+            .btns {
+                flex-direction: row !important;
+                justify-content: space-between;
+                margin: 16px 20px !important;
+            }
+        }
+        .item-2 {
+            grid-area: 5 / 1 / span 4 / span 12 !important; 
+        }
+        .item-3 {
+            grid-area: 9 / 1 / span 4 / span 12 !important; 
+        }
+        .item-4 {
+            grid-area: 13 / 1 / span 4 / span 12 !important; 
+        }
+    }
+}
